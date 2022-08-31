@@ -20,7 +20,7 @@ def submit():
         chrome_options.add_argument('--disable-dev-shm-usage')
         chromedriver = "/Usr/local/bin/ChromeDriver"
         os.environ["webdriver.chrome.driver"] = chromedriver
-        driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=chromedriver)
+        driver = webdriver.Chrome(options=chrome_options, executable_path=chromedriver)
 
 
         url = r'http://got.goermicro.com:8089/got/temperature/attend.html'
