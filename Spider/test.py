@@ -35,13 +35,14 @@ def submit():
 
         driver.get('http://got.goermicro.com:8089/got/temperature/to_temperature.html')
 
+        print(driver.title)
 
         time.sleep(50)
 
 
 
     except Exception as e:
-        prints("填报失败")
+        print("填报失败")
         pass
 
 
