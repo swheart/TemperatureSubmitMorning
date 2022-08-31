@@ -41,7 +41,7 @@ def submit():
 
 
     except Exception as e:
-        alert("填报失败")
+        prints("填报失败")
         pass
 
 
