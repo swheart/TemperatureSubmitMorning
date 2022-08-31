@@ -2,7 +2,6 @@ name: selenium
 
 # Controls when the action will run. 
 on:
-  push:
   schedule:
   # 定时任务，在每天的19点05分自动提交下午体温
     - cron: '5 11 * * *'
