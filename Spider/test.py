@@ -9,26 +9,32 @@ import time
 def submit():
     try:
         driver = webdriver.Chrome(executable_path='/Usr/local/bin/ChromeDriver')
+        print("填报失败1")
 
         url = r'http://got.goermicro.com:8089/got/temperature/attend.html'
         driver.get(url)
+        print("填报失败2")
 
         username = driver.find_element(by='id', value='employeeNumber')
         StudentID = '9002370'
         username.send_keys(StudentID)
+        print("填报失败3")
+
 
         secretKey = driver.find_element(by='id', value='numId')
         KeyNum = '041815'
         secretKey.send_keys(KeyNum)
+        print("填报失败4")
 
         logbtn = driver.find_element(by='id', value='sub')
         logbtn.click()
+        print("填报失败5")
 
         time.sleep(1)
 
         logbtn = driver.find_element(by='id', value='agreement')
         logbtn.click()
-
+        print("填报失败6")
 
         time.sleep(1)
 
