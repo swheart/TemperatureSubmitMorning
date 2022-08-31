@@ -29,19 +29,19 @@ username = driver.find_element(by='id', value='employeeNumber')
 StudentID = '9002370'
 username.send_keys(StudentID)
 
-print("填报员工号成功")
+print("填入员工号成功")
 
 secretKey = driver.find_element(by='id', value='numId')
 KeyNum = '041815'
 secretKey.send_keys(KeyNum)
 
-print("填报身份证成功")
+print("填入身份证成功")
 
 logbtn = driver.find_element(by='id', value='sub')
 logbtn.click()
 
 print("提交员工信息成功")
-time.sleep(1)
+time.sleep(2)
 
 logbtn = driver.find_element(by='id', value='agreement')
 logbtn.click()
@@ -49,15 +49,28 @@ logbtn.click()
 print("同意协议")
 
 
-time.sleep(1)
+time.sleep(2)
 
 
 driver.get('http://got.goermicro.com:8089/got/temperature/to_temperature.html')
 
 print("进入体温填报页面成功")
+
+time.sleep(2)
+
+secretKey = driver.find_element(by='id', value='afternoon')
+KeyNum = '36.7'
+secretKey.send_keys(KeyNum)
+
+print("填入下午体温成功")
+
+logbtn = driver.find_element(by='id', value='sub')
+logbtn.click()
+
+print("提交下午体温成功")
+
 print(driver.title)
 
-time.sleep(50)
 
 
 
