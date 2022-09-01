@@ -2,9 +2,9 @@ name: morningsub
 
 # Controls when the action will run. 
 on:
-  schedule:
+ #  schedule:
   # 定时任务，在每天的6点35分自动提交下午体温
-    - cron: '40 23 * * *'
+  #   - cron: '40 23 * * *'
 
 
   # Triggers the workflow on push or pull request events but only for the main branch
