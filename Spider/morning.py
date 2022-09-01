@@ -64,6 +64,11 @@ secretKey.send_keys(KeyNum)
 
 print("填入上午体温成功")
 
+dr = driver.find_element_by_id('surveyDate')
+dr.get_attribute('data-original-title') #获取tooltip的内容
+dr.text #获取该链接的text
+print('surveyDate')
+
 logbtn = driver.find_element(by='id', value='sub')
 logbtn.click()
 
