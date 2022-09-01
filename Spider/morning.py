@@ -69,5 +69,5 @@ logbtn.click()
 
 print("提交上午体温成功")
 
-
+print(driver.title)
 
