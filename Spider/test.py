@@ -64,10 +64,14 @@ secretKey.send_keys(KeyNum)
 
 print("填入上午体温成功")
 
+subdate = driver.find_element(by='id', value='surveyDate')
+print(subdate.get_attribute('value'))  # 获取文本值
+
 logbtn = driver.find_element(by='id', value='sub')
 logbtn.click()
 
 print("提交上午体温成功")
+
 
 
 
