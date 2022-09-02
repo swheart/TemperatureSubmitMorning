@@ -58,16 +58,16 @@ print("进入体温填报页面成功")
 
 time.sleep(2)
 
-secretKey = driver.find_element(by='id', value='afternoon')
-KeyNum = '36.8'
+secretKey = driver.find_element(by='id', value='morning')
+KeyNum = '36.7'
 secretKey.send_keys(KeyNum)
 
-print("填入下午体温成功")
+print("填入上午体温成功")
 
 logbtn = driver.find_element(by='id', value='sub')
 logbtn.click()
 
-print("提交下午体温成功")
+print("提交上午体温成功")
 
 
 
