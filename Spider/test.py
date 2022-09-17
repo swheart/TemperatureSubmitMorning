@@ -6,6 +6,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 from selenium.webdriver.chrome.options import Options
 import os
+import random
+
 
 
 
@@ -59,8 +61,10 @@ print("进入体温填报页面成功")
 time.sleep(2)
 
 secretKey = driver.find_element(by='id', value='morning')
-KeyNum = '36.7'
-secretKey.send_keys(KeyNum)
+def rands():
+    b = '{:.1f}'.format(random.uniform(36.2, 36.7))
+	return b
+secretKey.send_keys(rands())
 
 print("填入上午体温成功")
 
