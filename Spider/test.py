@@ -63,7 +63,7 @@ time.sleep(2)
 secretKey = driver.find_element(by='id', value='morning')
 def rands():
     b = '{:.1f}'.format(random.uniform(36.2, 36.7))
-	return b
+    return b
 secretKey.send_keys(rands())
 
 print("填入上午体温成功")
