@@ -75,9 +75,7 @@ logbtn = driver.find_element(by='id', value='sub')
 logbtn.click()
 
 print("提交上午体温成功")
-
-
-
+print(driver.title)
 
 
 
