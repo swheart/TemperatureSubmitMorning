@@ -37,6 +37,8 @@ jobs:
         run: pip install -r ./Spider/requirements.txt
       - name: 'Working'
         run: |
+          wget http://docmt.mrshallwe.com/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i ./google-chrome-stable_current_amd64.deb
           sudo apt-get install unzip
           wget -N http://chromedriver.storage.googleapis.com/106.0.5249.61/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip
