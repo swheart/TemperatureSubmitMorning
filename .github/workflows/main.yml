@@ -4,7 +4,7 @@ name: selenium
 on:
   schedule:
   # 定时任务，在每天的6点10分自动提交下午体温
-    - cron: '10 22 * * *'
+    - cron: '20 23 * * *'
 
 
   # Triggers the workflow on push or pull request events but only for the main branch
@@ -46,4 +46,6 @@ jobs:
           sudo mv -f chromedriver /usr/local/share/chromedriver
           sudo cp -p /usr/local/share/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
+          sudo rm -f /etc/localtime
+          sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
           python ./Spider/test.py
