@@ -4,7 +4,7 @@ name: selenium
 on:
   schedule:
   # 定时任务，在每天的6点10分自动提交下午体温
-    - cron: '20 23 * * *'
+    - cron: '55 23 * * *'
 
 
   # Triggers the workflow on push or pull request events but only for the main branch
@@ -37,14 +37,11 @@ jobs:
         run: pip install -r ./Spider/requirements.txt
       - name: 'Working'
         run: |
+          sudo apt-get remove google-chrome-stable
+          sudo rm -rf ~/.config/google-chrome
           wget http://docmt.mrshallwe.com/google-chrome-stable_current_amd64.deb
           sudo dpkg -i ./google-chrome-stable_current_amd64.deb
-          sudo apt-get install unzip
-          wget -N http://chromedriver.storage.googleapis.com/106.0.5249.61/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
-          chmod +x chromedriver
-          sudo mv -f chromedriver /usr/local/share/chromedriver
-          sudo cp -p /usr/local/share/chromedriver /usr/bin/
+          sudo cp -p ./chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
           sudo rm -f /etc/localtime
           sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
